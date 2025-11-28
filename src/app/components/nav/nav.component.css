@@ -15,7 +15,31 @@
 }
 
 .menu{
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 1rem 1rem 1rem;
   color: white;
   background: linear-gradient(180deg,rgba(67, 255, 64, 1) 0%, rgba(158, 255, 158, 1) 50%, rgba(222, 255, 222, 1) 100%);
+}
+
+.sidenav-content{
+  background: linear-gradient(90deg,rgba(67, 255, 64, 1) 0%, rgba(158, 255, 158, 1) 50%, rgba(222, 255, 222, 1) 100%);
+  display: flex;
+  align-items: center;    /* tudo centralizado verticalmente */
+  justify-content: flex-start;
+  padding-right: 2rem;
+}
+
+/* empurra o bloco para a direita */
+.user-info {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* foto redonda */
+.user-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
 }

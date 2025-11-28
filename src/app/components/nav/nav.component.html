@@ -1,11 +1,14 @@
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side" opened>
     <mat-nav-list class="nav-list">
-      <a mat-list-item routerLink="/">
+      <a mat-list-item routerLink="home">
         <i class="material-icons">home</i>Inicio
       </a>
       <a mat-list-item routerLink="/">
         <i class="material-icons">fitness_center</i>Meus treinos
+      </a>
+      <a mat-list-item href="https://github.com/brunomlima2323/appAcademiaFront">
+        <i class="material-icons">code</i>Github
       </a>
       <a mat-list-item routerLink="/">
         <i class="material-icons">logout</i>Sair
@@ -14,9 +17,17 @@
   </mat-drawer>
 
   <div class="sidenav-content">
-    <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
-      <mat-icon>menu</mat-icon>
-    </button>
-  </div>
+      <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span>BML academias</span>
+
+      <div class="user-info">
+        <img src="assets/img/weightlifting.gif" alt="User img" class="user-photo">
+        <span class="user-name">Bruno Lima</span>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
 
 </mat-drawer-container>

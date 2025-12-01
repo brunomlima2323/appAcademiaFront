@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="form" class="form mat-elevation-z8">
+    <h1>BML Academias</h1>
+    <mat-form-field class="full-width">
+      <mat-label>E-mail</mat-label>
+      <input formControlName="email" matInput placeholder="Ex. fulano@gmail.com">
+      <mat-error *ngIf="form.get('email')?.hasError('required')">
+        E-mail é obrigatório
+      </mat-error>
+      <mat-error *ngIf="form.get('email')?.hasError('email')">
+        E-mail inválido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Senha</mat-label>
+      <input formControlName="senha" matInput type="password" placeholder="Ex. 123">
+      <mat-error *ngIf="form.get('senha')?.hasError('required')">
+        Senha é obrigatória
+      </mat-error>
+      <mat-error *ngIf="form.get('senha')?.hasError('minlength')">
+        A senha precisa ter ao menos 3 caracteres
+      </mat-error>
+    </mat-form-field>
+    <button [disabled]="!validaCampos()" (click)="logar()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Login</button>
+  </form>
+</div>
+

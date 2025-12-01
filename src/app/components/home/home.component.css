@@ -15,7 +15,8 @@
 
 .card-content{
   width: 80%;
-  margin: auto;
+  /* margin: auto; */
+  margin-bottom: 2rem;
   color: white;
   background: #43FF40;
   align-items: center;

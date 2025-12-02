@@ -3,11 +3,11 @@
     <h1>BML Academias</h1>
     <mat-form-field class="full-width">
       <mat-label>E-mail</mat-label>
-      <input formControlName="email" matInput placeholder="Ex. fulano@gmail.com">
-      <mat-error *ngIf="form.get('email')?.hasError('required')">
+      <input formControlName="login" matInput placeholder="Ex. fulano@gmail.com">
+      <mat-error *ngIf="form.get('login')?.hasError('required')">
         E-mail é obrigatório
       </mat-error>
-      <mat-error *ngIf="form.get('email')?.hasError('email')">
+      <mat-error *ngIf="form.get('login')?.hasError('email')">
         E-mail inválido
       </mat-error>
     </mat-form-field>

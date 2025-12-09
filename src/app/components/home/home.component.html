@@ -3,10 +3,11 @@
     <h1>Treino de Hoje</h1>
     <mat-card class="card-content">
       <mat-card-header>
-        <mat-card-title>Dorsal / Cardio</mat-card-title>
+        <mat-card-title>{{treinoAtual?.nomeTreino}}</mat-card-title>
       </mat-card-header>
       <mat-card-actions>
         <button mat-raised-button>INICIAR</button>
+        <button mat-raised-button (click)="proximoTreino()">PROXIMO TREINO</button>
       </mat-card-actions>
     </mat-card>
   </mat-card>

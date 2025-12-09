@@ -6,6 +6,8 @@ import {MatListModule} from '@angular/material/list';
 import { Router, RouterLink } from "@angular/router";
 import {MatIconModule} from '@angular/material/icon';
 import { RouterOutlet } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-nav',
@@ -24,8 +26,19 @@ import { RouterOutlet } from '@angular/router';
 })
 export class NavComponent {
 
-  constructor(private router: Router){
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private toast: ToastrService
+  ){
     this.router.navigate(['home']);
+  }
+
+
+  logout(){
+    this.authService.logout();
+    this.router.navigate(['login']);
+    this.toast.info('Logout realizado com sucesso!','Logout');
   }
 
 }

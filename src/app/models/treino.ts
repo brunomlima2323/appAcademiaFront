@@ -1,5 +1,6 @@
 export interface Treino {
   id?: any;
   nomeTreino: string;
-  treinoAtual: boolean;
+  ordem: number;
+  atual: boolean;
 }

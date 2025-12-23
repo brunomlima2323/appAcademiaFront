@@ -7,7 +7,7 @@
         <mat-card-title>{{exercicio.nomeExercicio}}</mat-card-title>
       </mat-card-header>
       <mat-card-actions>
-        <button mat-raised-button (click)="finalizarExercicio(exercicio.exercicio_id)">Finalizar</button>
+        <button class="full-width mat-elevation-z4" mat-raised-button (click)="finalizarExercicio(exercicio.exercicio_id)">Finalizar</button>
       </mat-card-actions>
     </mat-card>
   </mat-card>
@@ -19,11 +19,11 @@
         <mat-card-title>{{exercicio.nomeExercicio}}</mat-card-title>
       </mat-card-header>
       <mat-card-actions>
-        <button mat-raised-button (click)="demarcarExercicio(exercicio.exercicio_id)">Marcar como pendente</button>
+        <button class="full-width mat-elevation-z4" mat-raised-button (click)="demarcarExercicio(exercicio.exercicio_id)">Marcar como pendente</button>
       </mat-card-actions>
     </mat-card>
     <mat-card-actions>
-      <button mat-raised-button (click)="proximoTreino()">Finalizar treino</button>
+      <button class="full-width mat-elevation-z4" mat-raised-button (click)="proximoTreino()">Finalizar treino</button>
     </mat-card-actions>
   </mat-card>
 

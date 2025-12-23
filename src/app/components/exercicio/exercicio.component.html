@@ -1,0 +1,30 @@
+<mat-card class="card-bg">
+  <h1>Treino: {{nomeTreino}}</h1>
+  <mat-card class="card">
+    <h2>Exercicios pendentes:</h2>
+    <mat-card class="card-content" *ngFor="let exercicio of exercicios">
+      <mat-card-header>
+        <mat-card-title>{{exercicio.nomeExercicio}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-raised-button (click)="finalizarExercicio(exercicio.exercicio_id)">Finalizar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-card>
+
+  <mat-card class="card">
+    <h2>Exercicios finalizados:</h2>
+    <mat-card class="card-content" *ngFor="let exercicio of exerciciosFinalizados">
+      <mat-card-header>
+        <mat-card-title>{{exercicio.nomeExercicio}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-raised-button (click)="demarcarExercicio(exercicio.exercicio_id)">Marcar como pendente</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card-actions>
+      <button mat-raised-button (click)="proximoTreino()">Finalizar treino</button>
+    </mat-card-actions>
+  </mat-card>
+
+</mat-card>

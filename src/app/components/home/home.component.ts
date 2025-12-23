@@ -5,6 +5,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { Treino } from '../../models/treino';
 import { CommonModule } from '@angular/common';
 import { TreinoService } from '../../services/treino.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,10 @@ export class HomeComponent {
   treinos: Treino[] = [];
   treinoAtual?: Treino;
 
-  constructor(private treinoService: TreinoService){}
+  constructor(
+    private treinoService: TreinoService,
+    private router: Router
+  ){}
 
   ngOnInit(): void{
     this.findAll();
@@ -42,6 +46,11 @@ export class HomeComponent {
     this.treinoService.proximoTreino().subscribe(resposta => {
       console.log(resposta);
     })
+  }
+
+  iniciarTreino(treino?: Treino){
+    console.log('iniciarTreino');
+    this.router.navigate(['exercicio', treino?.id]);
   }
 
 }

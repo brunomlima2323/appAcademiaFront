@@ -1,0 +1,23 @@
+.card-bg{
+  width: 100%;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.card {
+  width: 90%;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(235, 235, 235);
+  align-items: center;
+}
+
+.card-content{
+  width: 80%;
+  /* margin: auto; */
+  margin-bottom: 2rem;
+  color: white;
+  background: #43FF40;
+  align-items: center;
+}

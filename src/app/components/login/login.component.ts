@@ -66,6 +66,7 @@ export class LoginComponent {
             break;
           case 403:
             this.toast.error('Acesso negado (403)');
+            localStorage.clear();
             break;
           case 404:
             this.toast.error('Endpoint não encontrado (404)');

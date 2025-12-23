@@ -6,8 +6,8 @@
         <mat-card-title>{{treinoAtual?.nomeTreino}}</mat-card-title>
       </mat-card-header>
       <mat-card-actions>
-        <button mat-raised-button>INICIAR</button>
-        <button mat-raised-button (click)="proximoTreino()">PROXIMO TREINO</button>
+        <button mat-raised-button (click)="iniciarTreino(treinoAtual)">INICIAR</button>
+        <!-- <button mat-raised-button (click)="proximoTreino()">PROXIMO TREINO</button> -->
       </mat-card-actions>
     </mat-card>
   </mat-card>
@@ -20,9 +20,9 @@
       <mat-card-header>
         <mat-card-title>{{treino.nomeTreino}}</mat-card-title>
       </mat-card-header>
-      <mat-card-actions>
+      <!-- <mat-card-actions>
         <button mat-raised-button>INICIAR</button>
-      </mat-card-actions>
+      </mat-card-actions> -->
     </mat-card>
 
   </mat-card>

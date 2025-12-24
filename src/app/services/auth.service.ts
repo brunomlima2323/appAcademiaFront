@@ -15,7 +15,11 @@ export class AuthService {
 
   authenticate(creds: Credenciais){
     console.log(creds);
+    localStorage.clear();
     return this.http.post(`${API_CONFIG.baseUrl}/login`, creds,{
+      headers: {
+        'Content-Type': 'application/json'
+      },
       observe: 'response',
       responseType: 'json'
     });
